@@ -16,7 +16,7 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listTodos();
-    console.log(process.env.API_URL)
+    console.log(process.env['API_URL'])
   }
 
   listTodos() {
