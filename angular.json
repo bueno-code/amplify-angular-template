@@ -44,6 +44,10 @@
                   "maximumError": "4kb"
                 }
               ],
+              "polyfills": [
+              "zone.js",
+              "src/polyfills.ts"
+              ],
               "outputHashing": "all"
             },
             "development": {
