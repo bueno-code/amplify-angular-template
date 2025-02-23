@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../../amplify/data/resource';
 import { environment } from '../../environments/environment';
+import { TestService } from '../../Services/test.service';
 const client = generateClient<Schema>();
 
 @Component({
@@ -14,10 +15,10 @@ const client = generateClient<Schema>();
 })
 export class TodosComponent implements OnInit {
   todos: any[] = [];
-
+  constructor(private test:TestService) {}
   ngOnInit(): void {
     this.listTodos();
-    console.log(environment.API_URL)
+    this.test.test().subscribe((res) => console.log(res))
   }
 
   listTodos() {
