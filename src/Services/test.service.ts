@@ -12,6 +12,6 @@ export class TestService {
 
   public test():Observable<string>
   {
-    return this.http.get<string>(environment.API_URL + '/SimpleApi')
+    return this.http.get<string>(environment.API_URL + 'SimpleApi')
   }
 }
