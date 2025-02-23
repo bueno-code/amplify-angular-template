@@ -12,11 +12,6 @@ export class TestService {
 
   public test():Observable<string>
   {
-    // , 
-    //   {
-    //     headers: new HttpHeaders({'Content-Type': 'application/json',  accept: 'text/plain'}),
-    //     responseType: 'text'
-    //   }
     return this.http.get<string>(environment.API_URL + 'SimpleApi')
   }
 }
