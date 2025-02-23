@@ -12,14 +12,11 @@ export class TestService {
 
   public test():Observable<string>
   {
-    const httpOptions = {
-      headers: new HttpHeaders({'Content-Type': 'application/json',  accept: 'text/plain'}),
-      responseType: 'text'
-    };
-    return this.http.get(environment.API_URL + 'SimpleApi', 
-      {
-        headers: new HttpHeaders({'Content-Type': 'application/json',  accept: 'text/plain'}),
-        responseType: 'text'
-      })
+    // , 
+    //   {
+    //     headers: new HttpHeaders({'Content-Type': 'application/json',  accept: 'text/plain'}),
+    //     responseType: 'text'
+    //   }
+    return this.http.get<string>(environment.API_URL + 'SimpleApi')
   }
 }
