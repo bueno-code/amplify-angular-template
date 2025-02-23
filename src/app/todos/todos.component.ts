@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../../amplify/data/resource';
-import { environment } from '../../environments/environment';
 const client = generateClient<Schema>();
 
 @Component({
@@ -17,7 +16,7 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listTodos();
-    console.log(environment)
+    console.log(process.env['API_URL'])
   }
 
   listTodos() {
