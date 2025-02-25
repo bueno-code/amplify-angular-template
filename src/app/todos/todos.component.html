@@ -5,7 +5,8 @@
     <ul>
         <li 
             *ngFor="let todo of todos;">
-            {{ todo.content }}
+            <!-- {{ todo.content }} -->
+              <app-draggable [content] = "{{todo.content}}"/>
         </li>
     </ul>
     <div>
