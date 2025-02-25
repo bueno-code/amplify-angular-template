@@ -2,13 +2,9 @@
 <main>
     <h1>My todos</h1>
     <button (click)="createTodo()">+ new</button>
-    <ul>
-        <li 
-            *ngFor="let todo of todos;">
-            <!-- {{ todo.content }} -->
-              <app-draggable [content] = "todo.content"/>
-        </li>
-    </ul>
+    <ng-container *ngFor="let todo of todos;"> 
+        <app-draggable [content] = "todo.content"/>
+    </ng-container>
     <div>
         🥳 App successfully hosted. Try creating a new todo.
         <br />
