@@ -4,12 +4,14 @@ import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../../amplify/data/resource';
 import { environment } from '../../environments/environment';
 import { TestService } from '../../Services/test.service';
+import { DraggableComponent } from '../Components/draggable/draggable.component';
+
 const client = generateClient<Schema>();
 
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DraggableComponent],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.css',
 })
